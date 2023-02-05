@@ -1,7 +1,0 @@
-SELECT DISTINCT s.sname
-    FROM student s,class c,faculty f,enrolled e
-    WHERE  s.snum=e.snum      AND
-           e.cname=c.cname    AND
-           s.level='jr'   AND
-           f.fname='Harshith' AND
-           f.fid=c.fid;
