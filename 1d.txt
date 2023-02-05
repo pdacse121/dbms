@@ -1,0 +1,4 @@
+SELECT f.fname,f.fid
+            FROM faculty f
+            WHERE f.fid in ( SELECT fid FROM class
+            GROUP BY fid HAVING COUNT(*)=(SELECT COUNT(DISTINCT room) FROM class) );

@@ -1,0 +1,5 @@
+ SELECT DISTINCT cname
+    FROM class
+    WHERE room='room128'
+    OR
+    cname IN (SELECT e.cname FROM enrolled e GROUP BY e.cname HAVING COUNT(*)>=5);
