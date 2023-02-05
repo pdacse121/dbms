@@ -1,0 +1,1 @@
+SELECT DISTINCT e.ename FROM employees e WHERE e.salary< (SELECT MIN(f.price) FROM flight f WHERE f.frm='Bangalore' AND f.too='Frankfurt');

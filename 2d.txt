@@ -1,0 +1,1 @@
+SELECT a.aid,a.aname,AVG(e.salary) FROM aircraft a,certified c,employees e WHERE a.aid=c.aid AND a.cruisingrange>1000 GROUP BY a.aid,a.aname;

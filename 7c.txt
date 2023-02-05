@@ -1,0 +1,2 @@
+select s.salesmanid,s.name,c.cust_name,s.commission from salesman s,customer c where s.city=city UNION
+	select salesmanid,name,commission,'NO-MATCH' from salesman where NOT City = ANY(select city from customer)order by 2 desc;

@@ -1,0 +1,7 @@
+SELECT d.customer_name
+FROM account a,branch b,depositor d
+WHERE b.branch_name=a.branch_name AND a.accno=d.accno AND
+b.branch_city='c3'
+GROUP BY d.customer_name
+HAVING COUNT(distinct b.branch_name)=(SELECT COUNT(branch_name)
+                                      FROM branch WHERE branch_city='c3');

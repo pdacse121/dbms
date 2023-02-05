@@ -1,0 +1,1 @@
+SELECT distinct e.ename FROM employees e,aircraft a,certified c WHERE e.eid=c.eid AND c.aid=a.aid AND a.aname='Boeing';

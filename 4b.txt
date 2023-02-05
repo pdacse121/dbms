@@ -1,0 +1,1 @@
+SELECT author1_name FROM author1 a,catalogue1 c WHERE a.author1_id=c.author1_id AND book_id IN (SELECT book_id FROM orderdetails1 WHERE quantity= (SELECT MAX(quantity) FROM orderdetails1));

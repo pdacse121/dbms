@@ -1,0 +1,6 @@
+SELECT * FROM author1
+          WHERE author1_id IN
+          (SELECT author1_id FROM catalogue1 WHERE
+          year>2000 AND price>
+          (SELECT AVG(price) FROM catalogue1)
+          GROUP BY author1_id HAVING COUNT(*)>1);

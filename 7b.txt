@@ -1,0 +1,1 @@
+select salesmanid,name from salesman s where 1<(select salesmanid from customer WHERE s.salesmaind=salesmanid);

@@ -1,0 +1,1 @@
+SELECT a.aid FROM aircraft a WHERE a.cruisingrange> (SELECT MIN(f.distance) FROM flight f WHERE f.frm='Bangalore' AND f.too='Delhi');

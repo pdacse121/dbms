@@ -1,0 +1,10 @@
+SELECT c.courseno,t.book_isbn,t.book_title
+     FROM course c,book_adoption ba,text t
+     WHERE c.courseno=ba.courseno
+     AND ba.book_isbn=t.book_isbn
+     AND c.dept='CSE'
+     AND 2<(
+     SELECT COUNT(book_isbn)
+     FROM book_adoption b
+     WHERE c.courseno=b.courseno)
+     ORDER BY t.book_title;

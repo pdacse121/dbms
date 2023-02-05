@@ -1,0 +1,3 @@
+UPDATE account SET branch_name='Main' WHERE branch_name="b1";
+UPDATE account SET branch_name='Main' WHERE branch_name="b2";
+UPDATE account SET customer_name='cust1' WHERE customer_name="cust2";

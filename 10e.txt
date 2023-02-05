@@ -1,0 +1,1 @@
+update rating set stars=5 WHERE mid IN(select mid from movies WHERE did IN(select did from director WHERE dname='Stephen Speilberg')); 

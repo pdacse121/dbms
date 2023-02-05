@@ -1,0 +1,14 @@
+SELECT DISTINCT c.dept
+     FROM course c
+     WHERE c.dept IN
+     ( SELECT c.dept
+     FROM course c,book_adoption b,text t
+     WHERE c.courseno=b.courseno
+     AND t.book_isbn=b.book_isbn
+     AND t.publisher='PEARSON')
+     AND c.dept NOT IN
+     (SELECT c.dept
+     FROM course c,book_adoption b,text t
+     WHERE c.courseno=b.courseno
+     AND t.book_isbn=b.book_isbn
+     AND t.publisher != 'PEARSON');

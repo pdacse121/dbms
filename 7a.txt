@@ -1,0 +1,1 @@
+select grade,count(DISTINCT customerid) from customer where grade>(select AVG(grade) from customer where city='Bangalore');

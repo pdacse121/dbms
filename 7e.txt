@@ -1,0 +1,2 @@
+delete from salesman where salesmanid='1000'; 
+SELECT * FROM salesman;

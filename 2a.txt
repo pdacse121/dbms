@@ -1,0 +1,1 @@
+SELECT DISTINCT a.aname FROM aircraft a,certified c,employees e WHERE a.aid=c.aid AND c.eid=e.eid AND NOT EXISTS (SELECT *FROM employees e1  WHERE e1.eid=e.eid AND e1.salary<80000);

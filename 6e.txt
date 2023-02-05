@@ -1,0 +1,2 @@
+create view v_books as select b.bookid,b.title,c.noofcopies from book b,book_copies c,library_programme l 
+	WHERE b.bookid=c.bookid AND c.programmeid = l.programmeid;

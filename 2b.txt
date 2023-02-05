@@ -1,0 +1,1 @@
+SELECT c.eid,MAX(cruisingrange) FROM certified c,aircraft a WHERE c.aid=a.aid GROUP BY c.eid HAVING COUNT(*)>3;

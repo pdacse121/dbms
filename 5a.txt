@@ -1,0 +1,5 @@
+SELECT customer_name
+FROM depositor d,account a
+WHERE d.accno=a.accno AND a.branch_name='Main'
+GROUP BY d.customer_name
+HAVING COUNT(d.customer_name)>=2;

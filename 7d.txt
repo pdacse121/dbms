@@ -1,0 +1,2 @@
+create view BESTSALESMAN as select s.salesmanid,s.name,o.orddate from salesman s,orders o WHERE s.salesmanid = o.salesmanid AND 
+	o.purchase_amt = (select MAX(purchase_amt) from orders c WHERE c.orddate=o.orddate);

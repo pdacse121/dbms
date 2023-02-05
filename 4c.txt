@@ -1,0 +1,6 @@
+UPDATE catalogue1 SET price=1.1*price
+          WHERE publisher1_id IN
+          (SELECT publisher1_id FROM publisher1 WHERE
+         publisher1_name='pearson');
+         
+         SELECT * FROM catalogue1;
